@@ -58,7 +58,19 @@
 				get_the_title()
 			)
 		);
-
+		?>
+		<hr/>
+		<?php
+		$custom_color = get_post_meta(get_the_ID(), 'colorfield1', true);
+		echo "Color Field: $custom_color <br/>";
+		echo "Text Field: ".get_post_meta(get_the_ID(), 'testfield1', true)."<br/>";
+		?>
+		<p style="color:<?php echo $custom_color;?>">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, doloremque!</p>
+		<?php
+		echo "My favorite Foods: ".join(", ", get_post_meta(get_the_ID(), 'favfoods'));
+		?>
+		<hr/>
+		<?php
 		wp_link_pages(
 			array(
 				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
