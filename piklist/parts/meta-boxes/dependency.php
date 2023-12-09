@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Dependency Demo
- * Post Type: post
+ * Post Type: post, book
  */
 
 piklist('field', array(
